@@ -2,7 +2,8 @@
  *
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
- * Date: 9/29/18
+ * Date: 9/29/2018
+ * UPDATED: 10/25/2018
  * FILE: .java interface named Item.
  */
 
@@ -19,18 +20,18 @@ public interface Item {
      */
 
     //A method setProductionNumber that would have one integer parameter
-    public void setCurrentProductionNumber(int productionNumber);
+    void setProductionNumber(int productionNumber);
 
     //A method setName that would have one String parameter
-    public void setName(String na);
+    void setName(String na);
 
     //A method getName that would return a String
-    public String getName();
+    String getName();
 
     //A method getManufactureDate that would return a Date
-    public Date getManufactureDate();
+    Date getManufactureDate();
 
 
     //A method getSerialNumber that would return an int
-    public int getSerialNumber();
+    int getSerialNumber();
 }
