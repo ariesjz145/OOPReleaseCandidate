@@ -6,42 +6,41 @@
  * UPDATED: 10/25/2018
  * FILE: .java file class named AudioPlayer. (extending Product and
  * MultimediaControl implementing)
+ * Step 5
  */
 
-public class AudioPlayer extends Product implements MultimediaControl {
-  String audioSpecification;
-  ItemType mediaType;
+public class AudioPlayer extends Product implements MultimediaControl, Comparable<Item> {
+  protected String audioSpecification;
+  protected ItemType mediaType;
 
-  public AudioPlayer(String name, String audioSpecification, ItemType mediaType) {
+  public AudioPlayer(String name, String specification)
+  {
     super(name);
-    this.audioSpecification = audioSpecification;
-    this.mediaType = mediaType;
+    audioSpecification = specification;
+    mediaType = ItemType.AU;
   }
-
   @Override
   public void play() {
     System.out.println("Playing");
   }
-
   @Override
   public void stop() {
-    System.out.println("Stopping");
+    System.out.println("Stopped");
   }
-
   @Override
   public void previous() {
     System.out.println("Previous");
   }
-
   @Override
   public void next() {
     System.out.println("Next");
   }
 
-  @Override
-  public String toString() {
-    return super.toString() +
-        "Audio Specification : " + audioSpecification + '\n' +
-        "Media Type : " + mediaType + "\n";
+  public String toString()
+  {
+    String str = super.toString() + "\n" ;
+    str += "Audio Specification: " + audioSpecification + "\n" + "Type: " + mediaType ;
+    return str;
   }
+
 }

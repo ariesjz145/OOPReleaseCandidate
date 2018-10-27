@@ -5,32 +5,36 @@
  * Date: 9/29/18
  * UPDATED: 10/25/2018
  * FILE: .java file class named Screen that implements the interface ScreenSpec
+ * Step 9
  */
 
-public class Screen implements ScreenSpec{
-  String Resolution;
-  int refreshRate;
-  int responseTime;
+public class Screen implements ScreenSpec {
+  protected String resolution;
+  protected int refreshrate;
+  protected int responsetime;
 
+  public Screen(String resolution, int refreshrate, int responsetime)
+  {
+    this.resolution = resolution;
+    this.refreshrate = refreshrate;
+    this.responsetime = responsetime;
+  }
   @Override
   public String getResolution() {
-    return null;
+    return resolution;
   }
-
   @Override
   public int getRefreshRate() {
-    return 0;
+    return refreshrate;
   }
-
   @Override
   public int getResponseTime() {
-    return 0;
+    return responsetime;
   }
-
-  @Override
-  public String toString() {
-    return "resolution : " + Resolution + '\n' +
-        "refreshrate : " + refreshRate + "\n" +
-        "responsetime : " + responseTime + "\n";
+  public String toString()
+  {
+    return "Resolution: " + resolution + "\n" +
+        "Refresh Rate: " + refreshrate + "\n" +
+        "Response Time: " + responsetime ;
   }
 }
