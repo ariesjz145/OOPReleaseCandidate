@@ -14,11 +14,12 @@ import java.util.List;
 
 public class MediaCollectionDemo {
 
-  private static void print(List<Product> list)
-  {
-    for(Product p : list)
-      System.out.println(p +"\n");
+  private static void print(List<Product> list) {
+    for (Product p : list) {
+      System.out.println(p + "\n");
+    }
   }
+
   public static void main(String[] args) {
     ArrayList<Product> list = new ArrayList<Product>();
 
@@ -26,7 +27,7 @@ public class MediaCollectionDemo {
     list.add(new MoviePlayer("my movie player 3"));
 
     list.add(new AudioPlayer("my audio player 1", "audio spec1"));
-    list.add(new MoviePlayer("my movie player 1", new Screen("1024x768", 70,20), MonitorType.LED));
+    list.add(new MoviePlayer("my movie player 1", new Screen("1024x768", 70, 20), MonitorType.LED));
 
     list.add(new AudioPlayer("my audio player 2", "audio spec1"));
     list.add(new MoviePlayer("my movie player 2"));

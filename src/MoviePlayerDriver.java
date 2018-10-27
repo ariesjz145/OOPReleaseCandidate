@@ -9,8 +9,9 @@
  */
 
 public class MoviePlayerDriver {
+
   public static void main(String[] args) {
-    MoviePlayer player=new MoviePlayer("my movie player");
+    MoviePlayer player = new MoviePlayer("my movie player");
     System.out.println("Created a movie player and calling methods..");
     System.out.println(player);
     player.play();
