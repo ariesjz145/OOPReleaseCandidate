@@ -11,3 +11,6 @@ Project Alpha:
 *Did up to step 16 and continued off project alpha*
 We used InteliJ IDE to develop this program. 
 This was one of the projects we did in this class to help reinforce what we learned in Object Oriented Programming.
+------------------------------------------------------------------------------------------------------------------------------------------
+Used Windows 10
+Used Java JDK version 8
