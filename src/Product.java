@@ -3,70 +3,72 @@
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
  * Date: 9/29/18
- * UPDATED: 10/25/2018
+ * UPDATED: 12/06/2018
  * FILE: abstract .java class named Product that implements the .java interface Item.
- * Step 3
+ * Step 20
  */
-
+import java.util.ArrayList;
 import java.util.Date;
 
-public class Product implements Item, Comparable<Item> {
+public abstract class Product implements Item, Comparable<Product> {
 
-    protected int serialNumber;
-    protected String manufacturer;
-    protected Date manufacturedOn;
-    protected String name;
+    private int serialNumber;
+    private Date manufacturedOn;
+    private String name;
+    private String manufacturer = Item.MANUFACTURER;
 
-    //class variable
     private static int currentProductionNumber = 1;
-
-
-    public Product(String name) {
-        setName(name);
-        setProductionNumber(currentProductionNumber);
-        currentProductionNumber++;
-        manufacturer = MANUFACTURER;
+/*
+   Adding a constructor that will take in the name of the product
+   and set this to the field variable name.
+*/
+    Product(String name) {
+        this.name = name;
+        serialNumber = currentProductionNumber++;
         manufacturedOn = new Date();
+
+    }
+    /*
+    method to print an array list that will only print the type of product given
+    */
+    static <T> void printType(ArrayList<T> arrayList, Class c) {
+        for (T element: arrayList){
+            if (element.getClass() == c)
+                System.out.println(element);
+        }
+
     }
 
-    @Override
-    public void setProductionNumber(int prodNumber) {
-        serialNumber = prodNumber;
+    public void setProductionNumber(int number) {
+        serialNumber = number;
     }
 
-    @Override
     public void setName(String name) {
         this.name = name;
-
     }
 
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
     public Date getManufactureDate() {
         return manufacturedOn;
     }
 
-    @Override
     public int getSerialNumber() {
         return serialNumber;
     }
 
     public String toString() {
-        String str = "Manufacturer: " + manufacturer + "\n";
-        str += "Serial Number: " + serialNumber + "\n";
-        str += "Date: " + manufacturedOn + "\n";
-        str += "Name: " + name;
-        return str;
-
+        return "Manufacturer : " + manufacturer + "\n"
+            + "Serial Number : " + serialNumber + "\n"
+            + "Date : " + manufacturedOn + "\n"
+            + "Name : " + name + "\n";
     }
 
-    //for comparing based on names ..step 14
     @Override
-    public int compareTo(Item o) {
-        return name.compareTo(o.getName());
+    public int compareTo(Product product) {
+        return this.name.compareTo(product.name);
     }
+
 }

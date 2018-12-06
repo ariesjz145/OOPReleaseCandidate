@@ -2,10 +2,10 @@
  *
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
- * Date: 9/29/2018
- * UPDATED: 10/25/2018
- * FILE: .java interface named Item.
- * Step 1
+ * Date: 9/29/18
+ * UPDATED: 12/06/2018
+ * FILE: Interface Item.
+ * Step 20
  */
 
 import java.util.Date;

@@ -3,15 +3,22 @@
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
  * Date: 9/29/18
- * UPDATED: 10/25/2018
- * FILE: .java file enum named itemType.
- * Step 2
+ * UPDATED: 12/06/2018
+ * FILE: Enum ItemType.
+ * Step 20
  */
 
 public enum ItemType {
-    AU, //Audio
-    VI, //Visual
-    AM, //MobileAudio
-    VM; //MobileVisual
-    // itemType AUDIO = new ItemType ("AU");
+
+    // ItemType AUDIO = new ItemType("AU")
+    AUDIO("AU"),
+    VISUAL("VI"),
+    AUDIO_MOBILE("AM"),
+    VISUAL_MOBILE("VM");
+
+    public String code;
+
+    ItemType(String code) {
+        this.code = code;
+    }
 }

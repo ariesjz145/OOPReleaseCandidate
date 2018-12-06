@@ -1,30 +1,43 @@
 /**
+ *
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
  * Date: 9/29/18
- * UPDATED: 10/25/2018
- * FILE: .java class named Main.
- * IMPORTANT NOTICE: THIS PROJECT WAS ORIGINALLY PROJECT ALPHA BUT IT HAS BEEN
- * HEAVILY UPDATED AND IS NOW PROJECT BETA YOU CAN SEE WHEN IT WAS UPDATED ON
- * EACH FILE AT THE TOP OF THE COMMENTS.
+ * UPDATED: 12/06/2018
+ * FILE: Main .java Class.
+ * Step 20
  */
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
-  /**
-   *
-   * @param args
-   */
+  public static void main(String[] args) {
 
-  public static void main(String args[]) {
-
-    Widget w1 = new Widget();
+    Widget w1 = new Widget("Widget 1");
     System.out.println(w1.toString());
-    Widget w2 = new Widget();
+    Widget w2 = new Widget("Widget 2");
     System.out.println(w2.toString());
 
-  }
+      /*
+      for (ItemType it : ItemType.values()) {
+      System.out.println(it + " " + it.code);
+    }
+    AudioPlayerDriver.testAudioPlayer();
+    ScreenDriver.testScreen();
+    MoviePlayerDriver.testMoviePlayer();
+    PlayerDriver.testPlayer();
+      */
 
+    ArrayList<Product> arrayList = new ArrayList<>();
+    arrayList.add(w2);
+    arrayList.add(w1);
+
+    CollectionsTest.print(arrayList);
+
+    Collections.sort(arrayList);
+
+    CollectionsTest.print(arrayList);
+  }
 }

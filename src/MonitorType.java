@@ -3,9 +3,9 @@
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
  * Date: 9/29/18
- * UPDATED: 10/25/2018
- * FILE: .java file enum named MonitorType
- * Step 7
+ * UPDATED: 12/06/2018
+ * FILE: MonitorType enum type.
+ * Step 20
  */
 
 public enum MonitorType {

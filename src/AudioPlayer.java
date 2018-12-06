@@ -3,21 +3,23 @@
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
  * Date: 9/29/18
- * UPDATED: 10/25/2018
- * FILE: .java file class named AudioPlayer. (extending Product and
- * MultimediaControl implementing)
- * Step 5
+ * UPDATED: 12/06/2018
+ * FILE: AudioPlayer .java class extends Product and Implements MultimediaControl
+ * Step 20
  */
 
-public class AudioPlayer extends Product implements MultimediaControl, Comparable<Item> {
+public class AudioPlayer extends Product implements MultimediaControl {
 
-  protected String audioSpecification;
-  protected ItemType mediaType;
-
-  public AudioPlayer(String name, String specification) {
+  private String audioSpecifications;
+  private ItemType mediaType;
+    /*
+  Creates a constructor that will take in 2 parameters.
+  The constructor calls its parents constructor.
+    */
+  AudioPlayer(String name, String audioSpecifications) {
     super(name);
-    audioSpecification = specification;
-    mediaType = ItemType.AU;
+    mediaType = ItemType.AUDIO;
+    this.audioSpecifications = audioSpecifications;
   }
 
   @Override
@@ -27,7 +29,7 @@ public class AudioPlayer extends Product implements MultimediaControl, Comparabl
 
   @Override
   public void stop() {
-    System.out.println("Stopped");
+    System.out.println("Stopping");
   }
 
   @Override
@@ -40,10 +42,10 @@ public class AudioPlayer extends Product implements MultimediaControl, Comparabl
     System.out.println("Next");
   }
 
+  @Override
   public String toString() {
-    String str = super.toString() + "\n";
-    str += "Audio Specification: " + audioSpecification + "\n" + "Type: " + mediaType;
-    return str;
+    return super.toString() +
+        "Audio Spec : " + audioSpecifications + '\n' +
+        "Type : " + mediaType + '\n';
   }
-
 }

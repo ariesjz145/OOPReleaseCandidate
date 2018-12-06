@@ -2,16 +2,17 @@
  *
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
- * Date: 9/29/2018
- * UPDATED: 10/25/2018
- * FILE: .java Driver class named ScreenDriver
- * Step 10
+ * Date: 9/29/18
+ * UPDATED: 12/06/2018
+ * FILE: ScreenDriver .java class.
+ * Step 20
  */
-
 public class ScreenDriver {
 
-  public static void main(String[] args) {
-    Screen scr = new Screen("1024x768", 60, 10);
-    System.out.println(scr);
+  public static void testScreen() {
+
+    Screen screen = new Screen("1080", 60, 1);
+    System.out.println(screen);
   }
+
 }

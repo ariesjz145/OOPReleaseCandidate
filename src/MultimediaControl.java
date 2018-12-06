@@ -3,9 +3,9 @@
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
  * Date: 9/29/18
- * UPDATED: 10/25/2018
- * FILE: .java file interface named MultimediaControl.
- * Step 4
+ * UPDATED: 12/06/2018
+ * FILE: MultimediaControl Interface.
+ * Step 20
  */
 
 public interface MultimediaControl {

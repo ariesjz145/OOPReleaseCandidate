@@ -3,54 +3,46 @@
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
  * Date: 9/29/18
- * UPDATED: 10/25/2018
- * FILE: .java file named MoviePlayer extending Product
- * and implementing MediaControl as well as using a comparable
- * Step 11
+ * UPDATED: 12/06/2018
+ * FILE: MoviePlayer .java class.
+ * Step 20
  */
-
-public class MoviePlayer extends Product implements MultimediaControl, Comparable<Item> {
+public class MoviePlayer extends Product implements MultimediaControl {
 
   private Screen screen;
-  private MonitorType montiorType;
+  private MonitorType monitorType;
 
-  public MoviePlayer(String name) {
-    super(name);
-    screen = new Screen("1024x768", 60, 10);
-    montiorType = MonitorType.LCD;
-
-  }
-
-  public MoviePlayer(String name, Screen screen, MonitorType type) {
+  MoviePlayer(String name, Screen screen, MonitorType monitorType) {
     super(name);
     this.screen = screen;
-    this.montiorType = type;
+    this.monitorType = monitorType;
   }
 
   @Override
   public void play() {
-    System.out.println("Playing");
+    System.out.println("Playing movie");
   }
 
   @Override
   public void stop() {
-    System.out.println("Stopped");
+    System.out.println("Stopping movie");
   }
 
   @Override
   public void previous() {
-    System.out.println("Previous");
+    System.out.println("Previous movie");
   }
 
   @Override
   public void next() {
-    System.out.println("Next");
+    System.out.println("Next movie");
   }
 
-
+  @Override
   public String toString() {
-    return super.toString() + "\n" +
-        screen.toString() + "\n" +
-        "Monitor Type: " + montiorType;
+    return
+        super.toString() +
+            "Screen : " + screen +
+            "Monitor Type : " + monitorType + "\n";
   }
 }

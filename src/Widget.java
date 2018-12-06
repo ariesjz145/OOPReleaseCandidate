@@ -3,18 +3,17 @@
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
  * Date: 9/29/18
- * UPDATED: 10/25/2018
- * FILE: .java class named Widget.
-*/
+ * UPDATED: 12/06/2018
+ * FILE: Widget .java class.
+ * Step 20
+ */
 
 import java.util.Date;
 
-public class Widget extends Product {
+class Widget extends Product {
 
-    private int productNumber;
-
-    public Widget() {
-        super("name");
+    Widget(String name) {
+        super(name);
     }
 
 }

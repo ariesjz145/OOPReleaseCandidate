@@ -3,18 +3,19 @@
  * Author: Joshua Zamora
  * Class: Object Oriented Programming
  * Date: 9/29/18
- * UPDATED: 10/25/2018
- * FILE: .java file class named Screen that implements the interface ScreenSpec
- * Step 9
+ * UPDATED: 12/06/2018
+ * FILE: Screen .java class.
+ * Step 20
  */
 
 public class Screen implements ScreenSpec {
 
-  protected String resolution;
-  protected int refreshrate;
-  protected int responsetime;
+  private String resolution;
+  private int refreshrate;
+  private int responsetime;
 
-  public Screen(String resolution, int refreshrate, int responsetime) {
+  //constructor
+  Screen(String resolution, int refreshrate, int responsetime) {
     this.resolution = resolution;
     this.refreshrate = refreshrate;
     this.responsetime = responsetime;
@@ -22,22 +23,24 @@ public class Screen implements ScreenSpec {
 
   @Override
   public String getResolution() {
-    return resolution;
+    return this.resolution;
   }
 
   @Override
   public int getRefreshRate() {
-    return refreshrate;
+    return this.refreshrate;
   }
 
   @Override
   public int getResponseTime() {
-    return responsetime;
+    return this.responsetime;
   }
 
+  @Override
   public String toString() {
-    return "Resolution: " + resolution + "\n" +
-        "Refresh Rate: " + refreshrate + "\n" +
-        "Response Time: " + responsetime;
+    return
+        "Resolution : " + resolution + '\n' +
+            "Refresh Rate : " + refreshrate + '\n' +
+            "Response Time : " + responsetime + '\n';
   }
 }
